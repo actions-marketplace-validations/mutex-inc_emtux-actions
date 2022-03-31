@@ -8,5 +8,5 @@ outputs:
   result-message: # outputして他から参照するための名前
     description: '生成した文字列'
 runs:
-  using: 'node16'
-  main: '.build/index.js'
+  using: 'docker'
+  image: 'Dockerfile'
