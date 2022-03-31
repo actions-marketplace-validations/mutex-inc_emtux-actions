@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2019",
+    "moduleResolution": "node",
+    "strictFunctionTypes": true,
+    "outDir": ".build",
     "preserveConstEnums": true,
     "strictNullChecks": true,
     "strict": true,
-    "target": "ES2019",
-    "allowJs": true,
-    "declaration": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "module": "CommonJS",
-    "rootDir": "./",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
     "sourceMap": true,
-    "skipLibCheck": true
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "**/node_modules/*", ".build"]
 }
