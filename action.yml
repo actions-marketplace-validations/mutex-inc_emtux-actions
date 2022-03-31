@@ -1,8 +1,11 @@
 name: emtux actions
 description: emtux actions
 inputs:
-  json-data: # inputするときの名前
+  params:
     description: '引数のJSONオブジェクト'
+    required: true
+  api:
+    description: 'api docの中身'
     required: true
 outputs:
   result-message: # outputして他から参照するための名前
