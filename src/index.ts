@@ -11,6 +11,8 @@ const main = async () => {
 
     const repo = jsonObject.types_repo;
 
+    console.log(api);
+
     const api = yaml.load(core.getInput('api'));
 
     core.setOutput('result-message', `repo: ${repo}\napi: ${api}`);
