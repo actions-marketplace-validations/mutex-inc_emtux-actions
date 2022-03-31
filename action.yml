@@ -1,7 +1,7 @@
 name: emtux actions
 description: emtux actions
 inputs:
-  json-data:  # inputするときの名前
+  json-data: # inputするときの名前
     description: '引数のJSONオブジェクト'
     required: true
 outputs:
