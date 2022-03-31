@@ -5,4 +5,4 @@ COPY . .
 RUN npm install -g typescript
 RUN npm install
 
-ENTRYPOINT ["node", "./.build/index.js"]
+ENTRYPOINT ["node", "/.build/index.js"]
