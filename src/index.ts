@@ -1,21 +1,16 @@
 import * as core from '@actions/core';
-import * as exec from '@actions/exec';
-import * as yaml from 'js-yaml';
-import { ExecOptions } from '@actions/exec';
+import { ActionCategoryType } from './constant/actionType';
+import { execute } from './actions/router';
 
-const main = async () => {
+const main = async (): Promise<void> => {
   try {
     // inputのJSONオブジェクトを取得する
     // core.getInputの戻り値はstringのため、JSON.parseが必要
-    const jsonObject = JSON.parse(core.getInput('params'));
+    const params = JSON.parse(core.getInput('params'));
 
-    const repo = jsonObject.types_repo;
+    const action = params.action_type as ActionCategoryType;
 
-    const api = yaml.load(core.getInput('api'));
-
-    console.log(api);
-
-    core.setOutput('result-message', `repo: ${repo}\napi: ${api}`);
+    await execute(action)();
   } catch (error) {
     core.setFailed(error as Error);
   }
