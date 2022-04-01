@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 export type ApiDoc = {
   openapi: string;
@@ -52,3 +52,4 @@ export type ApiDocResponseContent = {
     };
   };
 };
+ */
