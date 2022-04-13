@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/mutex-inc/emtux-actions.git"
   },
-  "author": "mutex inc.",
+  "author": "mutex-inc",
   "license": "PRIVATE",
   "scripts": {
     "clear": "rm -rf .build",
